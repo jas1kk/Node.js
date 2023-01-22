@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:8080/feed.css">
+    <link rel="stylesheet" href="http://localhost:8080/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Feed</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_bar">
+                <li><a href="./feed.html">Лента</a></li>
+                <li><a href="./profile.html">Профиль</a></li>
+                <li><a href="./users.html">Список пользователей</a></li>
+            </ul>
+        </nav>
+        <button id="LogOut_btn" onclick="logOut()">Выйти</button>
+    </header>
+    <main>
+        <!-- <div class="post_block">
+            <div class="user_info">
+                <div class="user_logo">
+                    <img src="http://localhost:8080/userIcon.png" alt="">
+                </div>
+                <p class="post_author">Alibi</p>
+                <p class="post_date">2023-01-14T17:40:32.045Z</p>
+            </div>
+            <p class="post_header">Заголовок тестового Поста</p>
+            <p class="post_data">Кто в Японии как месте для работы программиста что-то понимает? В каких компаниях там хорошая зарплата, европейский соцпакет и отсутствие традиционных японских ценностей в менеджменте и корпоративной культуре}</p>
+            <div class="post_like_part">
+                <img class="like_post_btn" src="http://localhost:8080/like.png" alt="" onclick="likePost('${post._id}')">
+                <p class="likes_amount">5</p>
+                <img class="like_post_btn" src="http://localhost:8080/unlike.png" alt="" nclick="unlikePost('${post._id}')">
+            </div>
+        </div> -->
+        <div class="posts_feed_block">
+
+        </div>
+    </main>
+
+    <script src="./scripts/feedScript.js"></script>
+</body>
+</html>
