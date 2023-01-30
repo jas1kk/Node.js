@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <title></title>
+      <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+      <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="http://localhost:8080/profile.css">
+      <link rel="stylesheet" href="http://localhost:8080/main.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+      <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</head>
+<body className='snippet-body'>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Social Blog</span> </a>
+                <div class="nav_list"> 
+                  <a href="./feed.html" class="nav_link"> <i class='bx bx-news nav_icon'></i> <span class="nav_name">Лента</span> </a> 
+                  <a href="./profile.html" class="nav_link active"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Профиль</span> </a> 
+                  <a href="./users.html" class="nav_link"> <i class='bx bx-user-plus nav_icon'></i> <span class="nav_name">Пользователи</span> </a> 
+                </div>
+            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon' id="LogOut_btn" onclick="logOut()"></i> <span class="nav_name" id="LogOut_btn" onclick="logOut()">Выйти</span> </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div>
+      <main>
+        <!-- Модалка создания поста -->
+        <div id="modal1">
+            <div id="create_post_modal">
+                <p class="modal_header">Создать пост</p>
+                <label for="create_post_header" class="text_publica">Название Публикации:</label>
+                <input type="text" name="" id="create_post_header">
+                <label for="create_post_data" class="text_posta">Текст Публикации:</label>
+                <textarea name="" id="create_post_data" cols="30" rows="10"></textarea>
+                <button id="create_post_btn">Создать</button>
+                <button id="close_modal_create_post">Отмена</button>
+            </div>
+        </div>
+        <!-- модалка обновления поста -->
+        <div id="modal2">
+            <div id="update_post_modal">
+        </div>
+        <!-- модалка изменения пользователя -->
+
+        </div>
+        <div id="modal3">
+            <div class="profile_info_block">
+                <p class="modal_header">Редактировать Профиль</p>
+                <input type="text" name="" id="author_fullName">
+                <textarea name="" id="author_about_field" cols="30" rows="10"></textarea>
+                <div class="ul" id="followed_author_list"></div>
+                <button id="update_profile_info">Обновить</button>
+                <button id="closeUpdateUserModal">Отмена</button>
+            </div>
+        </div>
+        <div class="user_info_block">
+            <div class="user_info">
+                <div class="user_logo">
+                    <img src="http://localhost:8080/images.png" alt="">
+                </div>
+                <div class="user_info_text">
+                    <p id="author_fullName_info"></p>
+                    <p id="author_about_field_info"></p>
+                    <div class="btns-profile">
+                      <button id="change_author_info_btn">Редактировать профиль</button>
+                      <button id="create_post_open_modal">Создать Пост</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="author_posts_block">
+    
+        </div>
+    </main>
+    </div>
+    <!--Container Main end-->
+    <script src="./scripts/profileScript.js"></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript' src='#'></script>
+    <script type='text/javascript'>document.addEventListener("DOMContentLoaded", function(event) {
+   
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+const toggle = document.getElementById(toggleId),
+nav = document.getElementById(navId),
+bodypd = document.getElementById(bodyId),
+headerpd = document.getElementById(headerId)
+
+// Validate that all variables exist
+if(toggle && nav && bodypd && headerpd){
+toggle.addEventListener('click', ()=>{
+// show navbar
+nav.classList.toggle('show')
+// change icon
+toggle.classList.toggle('bx-x')
+// add padding to body
+bodypd.classList.toggle('body-pd')
+// add padding to header
+headerpd.classList.toggle('body-pd')
+})
+}
+}
+
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== LINK ACTIVE =====*/
+const linkColor = document.querySelectorAll('.nav_link')
+
+function colorLink(){
+if(linkColor){
+linkColor.forEach(l=> l.classList.remove('active'))
+this.classList.add('active')
+}
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+ // Your code to run since DOM is loaded and ready
+});</script>
+<script type='text/javascript'>
+var myLink = document.querySelector('a[href="#"]');
+myLink.addEventListener('click', function(e) {
+  e.preventDefault();
+});</script>
+                            
+  </body>
+</html>
